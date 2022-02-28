@@ -22,10 +22,11 @@ _TBD-course-description_
 -->
 
 <details id=0 open>
-<summary><strong>:golf: Start</strong></summary>
+<summary><h2>:golf: Start</h2></summary>
 
-### [![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/TBD-organization/TBD-repository-name/generate)
+[![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/TBD-organization/TBD-repository-name/generate)
 
+> When you select **Start course** or **Use this template**, you will be prompted to create a new repository.
 > We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).<br>
 > After you make your own repository, wait about 20 seconds and refresh. I will go to the next step.
 
@@ -49,9 +50,9 @@ TBD-welcome-paragraph
 -->
 
 <details id=1>
-<summary><strong>:TBD-step-1-emoji: Step 1: TBD-step-1-name</strong></summary>
+<summary><h2>:TBD-step-1-emoji: Step 1: TBD-step-1-name</h2></summary>
 
-### Welcome to "TBD-course-name"! :wave:
+_Welcome to "TBD-course-name"! :wave:_
 
 TBD-step-1-information
 
@@ -73,9 +74,9 @@ TBD-step-1-information
 -->
 
 <details id=2>
-<summary><strong>:TBD-step-2-emoji: Step 2: TBD-step-2-name</strong></summary>
+<summary><h2>:TBD-step-2-emoji: Step 2: TBD-step-2-name</h2></summary>
 
-### You did TBD-step-1-name! :tada:
+_You did TBD-step-1-name! :tada:_
 
 TBD-step-2-information
 
@@ -96,9 +97,9 @@ TBD-step-2-information
 -->
 
 <details id=3>
-<summary><strong>:TBD-step-3-emoji: Step 3: TBD-step-3-name</strong></summary>
+<summary><h2>:TBD-step-3-emoji: Step 3: TBD-step-3-name</h2></summary>
 
-### Nice work finishing TBD-step-2-name :sparkles:
+_Nice work finishing TBD-step-2-name :sparkles:_
 
 TBD-step-3-information
 
@@ -119,9 +120,9 @@ TBD-step-3-information
 -->
 
 <details id=4>
-<summary><strong>:TBD-step-4-emoji: Step 4: TBD-step-4-name</strong></summary>
+<summary><h2>:TBD-step-4-emoji: Step 4: TBD-step-4-name</h2></summary>
 
-### Nicely done TBD-step-3-name! :partying_face:
+_Nicely done TBD-step-3-name! :partying_face:_
 
 TBD-step-4-information
 
@@ -142,9 +143,9 @@ TBD-step-4-information
 -->
 
 <details id=5>
-<summary><strong>:shipit: Step 5: Merge your pull request</strong></summary>
+<summary><h2>:shipit: Step 5: Merge your pull request</h2></summary>
 
-### Almost there TBD-step-4-name! :heart:
+_Almost there TBD-step-4-name! :heart:_
 
 You can now [merge](https://docs.github.com/en/get-started/quickstart/github-glossary#merge) your pull request!
 
@@ -162,9 +163,9 @@ You can now [merge](https://docs.github.com/en/get-started/quickstart/github-glo
 -->
 
 <details id=X>
-<summary><strong>:checkered_flag: Finish</strong></summary>
+<summary><h2>:checkered_flag: Finish</h2></summary>
 
-### Congratulations friend, you've completed this course!
+_Congratulations friend, you've completed this course!_
 
 <img src=TBD-celebrate-image alt=celebrate width=300 align=right>
 
