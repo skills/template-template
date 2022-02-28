@@ -143,7 +143,7 @@ TBD-step-4-information
 -->
 
 <details id=5>
-<summary><h2>:squirrel: Step 5: Merge your pull request</h2></summary>
+<summary><h2>:chipmunk: Step 5: Merge your pull request</h2></summary>
 
 _Almost there TBD-step-4-name! :heart:_
 
