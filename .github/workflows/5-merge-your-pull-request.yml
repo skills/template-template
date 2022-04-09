@@ -27,7 +27,7 @@ jobs:
     # Reference https://docs.github.com/en/actions/learn-github-actions/contexts
     # Reference https://docs.github.com/en/actions/learn-github-actions/expressions
     if: ${{ !github.event.repository.is_template }}
-    # TBD replace `githublearn` with your organization name, if applicable
+    # TBD replace `skills` with your organization name, if applicable
 
     # We'll run Ubuntu for performance instead of Mac or Windows
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
       # Update README to close <details id=5> and open <details id=X>
       # and set STEP to 'X'
       - name: Update to step X
-        uses: githublearn/action-update-step@v1
+        uses: skills/action-update-step@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 5
