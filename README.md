@@ -6,8 +6,6 @@
   Add your open source license, GitHub uses Creative Commons Attribution 4.0 International.
 -->
 
-<img src=TBD-social-image width=300 align=right>
-
 # TBD-course-name
 
 _TBD-course-description_
@@ -22,7 +20,7 @@ _TBD-course-description_
 -->
 
 <details id=0 open>
-<summary><h2>:golf: Start</h2></summary>
+<summary><h2>Start</h2></summary>
 
 [![start-course](https://user-images.githubusercontent.com/1221423/154366775-5491926f-9ed1-4a4a-a229-0810c0ed7e5e.svg)](https://github.com/TBD-organization/TBD-repository-name/generate)
 
@@ -50,7 +48,7 @@ TBD-welcome-paragraph
 -->
 
 <details id=1>
-<summary><h2>:TBD-step-1-emoji: Step 1: TBD-step-1-name</h2></summary>
+<summary><h2>Step 1: TBD-step-1-name</h2></summary>
 
 _Welcome to "TBD-course-name"! :wave:_
 
@@ -74,7 +72,7 @@ TBD-step-1-information
 -->
 
 <details id=2>
-<summary><h2>:TBD-step-2-emoji: Step 2: TBD-step-2-name</h2></summary>
+<summary><h2>Step 2: TBD-step-2-name</h2></summary>
 
 _You did TBD-step-1-name! :tada:_
 
@@ -97,7 +95,7 @@ TBD-step-2-information
 -->
 
 <details id=3>
-<summary><h2>:TBD-step-3-emoji: Step 3: TBD-step-3-name</h2></summary>
+<summary><h2>Step 3: TBD-step-3-name</h2></summary>
 
 _Nice work finishing TBD-step-2-name :sparkles:_
 
@@ -120,7 +118,7 @@ TBD-step-3-information
 -->
 
 <details id=4>
-<summary><h2>:TBD-step-4-emoji: Step 4: TBD-step-4-name</h2></summary>
+<summary><h2>Step 4: TBD-step-4-name</h2></summary>
 
 _Nicely done TBD-step-3-name! :partying_face:_
 
@@ -143,7 +141,7 @@ TBD-step-4-information
 -->
 
 <details id=5>
-<summary><h2>:chipmunk: Step 5: Merge your pull request</h2></summary>
+<summary><h2>Step 5: Merge your pull request</h2></summary>
 
 _Almost there TBD-step-4-name! :heart:_
 
@@ -163,7 +161,7 @@ You can now [merge](https://docs.github.com/en/get-started/quickstart/github-glo
 -->
 
 <details id=X>
-<summary><h2>:checkered_flag: Finish</h2></summary>
+<summary><h2>Finish</h2></summary>
 
 _Congratulations friend, you've completed this course!_
 
