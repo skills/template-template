@@ -21,6 +21,7 @@ _TBD-course-description_
 -->
 
 <details id=0 open>
+<summary><h2>Details of this course</h2></summary>
 
 TBD-welcome-paragraph
 
