@@ -8,7 +8,8 @@ name: Step 1, TBD-step-1-name
 # Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
   workflow_dispatch:
-  TBD-step-1-event:
+  # Add events that trigger this workflow
+  # TBD-step-1-event:
 
 # Reference https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 permissions:
