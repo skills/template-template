@@ -21,7 +21,7 @@ _TBD-course-description_
 -->
 
 <details id=0 open>
-<summary><h2>Details of this course</h2></summary>
+<summary><h2>Course Aims</h2></summary>
 
 TBD-welcome-paragraph
 
@@ -30,6 +30,10 @@ TBD-welcome-paragraph
 - **What you'll build**: TBD-result.
 - **Prerequisites**: TBD-prerequisites.
 - **How long**: This course is TBD-step-count steps long and takes less than TBD-duration to complete.
+
+</details>
+
+<!--step0-->
 
 ## How to start this course
 
@@ -41,7 +45,7 @@ TBD-welcome-paragraph
    ![Create a new repository](https://user-images.githubusercontent.com/1221423/169618722-406dc508-add4-4074-83f0-c7a7ad87f6f3.png)
 3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
 
-</details>
+<!--endstep0-->
 
 <!--
   <<< Author notes: Step 1 >>>
