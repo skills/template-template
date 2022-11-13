@@ -27,8 +27,7 @@ jobs:
         uses: actions/checkout@v3
       - id: get_step
         run: |
-          echo "::echo::on"
-          echo "::set-output name=current_step::$(cat ./.github/script/STEP)"
+          echo "current_step=$(cat ./.github/script/STEP)" >> $GITHUB_OUTPUT
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
