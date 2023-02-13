@@ -1,16 +1,15 @@
-name: Step 5, Merge your pull request
+name: Step 5, TBD-step-5-name
 
-# This step triggers after a pull requst is merged to `main`
+# This step triggers after TBD-step-5-event-desc
 # This step sets STEP to X
 # This step closes <details id=5> and opens <details id=X>
 
-# This will run every time we create push a commit to `main`
+# This will run every time we TBD-step-5-event-desc
 # Reference https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  # Add events that trigger this workflow
+  # TBD-step-5-event:
 
 # Reference https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 permissions:
@@ -31,8 +30,8 @@ jobs:
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
-  on_merge:
-    name: On merge
+  on_TBD-step-5-event:
+    name: On TBD-step-5-event
     needs: get_current_step
 
     # We will only run this action when:
@@ -54,8 +53,10 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches
 
+      # TBD-step-5-additional-steps
+
       # Update README to close <details id=5> and open <details id=X>
-      # and set STEP to 'X'
+      # and set STEP to '5'
       - name: Update to step X
         uses: skills/action-update-step@v1
         with:

@@ -20,7 +20,8 @@ _TBD-course-description_
   Do not use quotes on the <details> tag attributes.
 -->
 
-<!--step0-->
+<details id=0 open>
+<summary><h2>Welcome</h2></summary>
 
 TBD-welcome-paragraph
 
@@ -32,15 +33,15 @@ TBD-welcome-paragraph
 
 ## How to start this course
 
-1. Above these instructions, right-click **Use this template** and open the link in a new tab.
-   ![Use this template](https://user-images.githubusercontent.com/1221423/169618716-fb17528d-f332-4fc5-a11a-eaa23562665e.png)
+1. Right-click **Start course** and open the link in a new tab.
+   [![start-course](https://user-images.githubusercontent.com/1221423/218591375-46b0ad0e-0bbd-41cb-ab59-7a37a6257d33.svg)](/TBD-generate)
 2. In the new tab, follow the prompts to create a new repository.
    - For owner, choose your personal account or an organization to host the repository.
    - We recommend creating a public repository—private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   ![Create a new repository](https://user-images.githubusercontent.com/1221423/169618722-406dc508-add4-4074-83f0-c7a7ad87f6f3.png)
+   ![Create a new repository](https://user-images.githubusercontent.com/1221423/218591846-1c5b0031-ab1b-4fb9-8396-04092cc36efe.png)
 3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
 
-<!--endstep0-->
+</details>
 
 <!--
   <<< Author notes: Step 1 >>>
@@ -145,16 +146,15 @@ TBD-step-4-information
 -->
 
 <details id=5>
-<summary><h2>Step 5: Merge your pull request</h2></summary>
+<summary><h2>Step 5: TBD-step-5-name</h2></summary>
 
 _Almost there TBD-step-4-name! :heart:_
 
-You can now [merge](https://docs.github.com/en/get-started/quickstart/github-glossary#merge) your pull request!
+TBD-step-5-information
 
-### :keyboard: Activity: Merge your pull request
+### :keyboard: Activity: TBD-step-5-name
 
-1. Click **Merge pull request**.
-1. Delete the branch `TBD-branch-name` (optional).
+1. TBD-step-5-instructions.
 1. Wait about 20 seconds then refresh this page for the next step.
 
 </details>
