@@ -56,7 +56,7 @@ jobs:
       # TBD-step-5-additional-steps
 
       # Update README to close <details id=5> and open <details id=X>
-      # and set STEP to '5'
+      # and set STEP to 'X'
       - name: Update to step X
         uses: skills/action-update-step@v1
         with:
