@@ -33,7 +33,7 @@ TBD-welcome-paragraph
 
 ## How to start this course
 
-<!-- For TBD-generate, run in JavaScript:
+<!-- For start course, run in JavaScript:
 'https://github.com/new?' + new URLSearchParams({
   template_owner: 'TBD-organization',
   template_name: 'TBD-course-name',
