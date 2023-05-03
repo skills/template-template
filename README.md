@@ -48,7 +48,7 @@ TBD-welcome-paragraph
 
 1. Right-click **Start course** and open the link in a new tab.
 2. In the new tab, follow the prompts to create a new repository.
-  - For owner, we recommend your personal account.
+  - For owner, choose your personal account or an organization to host the repository.
   - We recommend creating a public repository—private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
   - Press the **Create repository** button at the bottom of the form.
 3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
