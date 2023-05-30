@@ -12,12 +12,9 @@
 _TBD-course-description_
 
 <!--
-  <<< Author notes: Start of the course >>>
+  <<< Author notes: Course start >>>
   Include start button, a note about Actions minutes,
   and tell the learner why they should take the course.
-  Each step should be wrapped in <details>/<summary>, with an `id` set.
-  The start <details> should have `open` as well.
-  Do not use quotes on the <details> tag attributes.
 -->
 
 <details id=0 open>
@@ -29,9 +26,15 @@ TBD-welcome-paragraph
 - **What you'll learn**: TBD-objective.
 - **What you'll build**: TBD-result.
 - **Prerequisites**: TBD-prerequisites.
-- **How long**: This course is TBD-step-count steps long and takes less than TBD-duration to complete.
+- **How long**: This course takes less than TBD-duration to complete.
 
-## How to start this course
+In this course, you will:
+
+1.
+2.
+3.
+
+### How to start this course
 
 <!-- For start course, run in JavaScript:
 'https://github.com/new?' + new URLSearchParams({
@@ -206,4 +209,4 @@ Here's a recap of all the tasks you've accomplished in your repository:
 
 Get help: [TBD-support](TBD-support-link) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
 
-&copy; 2022 TBD-copyright-holder &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2023 TBD-copyright-holder &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
