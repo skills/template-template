@@ -17,4 +17,3 @@ TBD-step-3-information
 
 1. TBD-step-3-instructions.
 1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-
