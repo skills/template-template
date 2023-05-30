@@ -1,7 +1,7 @@
 name: Step 5, TBD-step-5-name
 
 # This step triggers after TBD-step-5-event-desc.
-# This workflow updates from step  to step X.
+# This workflow updates from step 5 to step X.
 
 # This will run every time we TBD-step-5-event-desc.
 # Reference: https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
