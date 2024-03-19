@@ -9,7 +9,7 @@
   Add your open source license, GitHub uses the MIT license.
 -->
 
-# TBD-course-name
+# TBD-Carrier Packet Registration-name
 
 _TBD-course-description_
 
@@ -23,31 +23,36 @@ _TBD-course-description_
 
 ## Welcome
 
-TBD-welcome-paragraph
+  TBD-welcome-Carrir Registration
 
-- **Who is this for**: TBD-audience.
-- **What you'll learn**: TBD-objective.
-- **What you'll build**: TBD-result.
+- **Who is this for**: New Carriers-audience.
+- **What you'll learn**: Documentation for carrier agreement-objective.
+- **What you'll build**: Intake -result.
 - **Prerequisites**: TBD-prerequisites.
 - **How long**: This course takes less than TBD-duration to complete.
 
 In this course, you will:
 
-1. TBD-step-1-name
-2. TBD-step-2-name
-3. TBD-step-3-name
-4. TBD-step-4-name
-5. TBD-step-5-name
+1. Broker-Carrier Agreement-step-1-name
+2. Completed W-9 form-step-2-name
+3. Liability Insurance-step-3-name
+4. Copy of MC operating authority-step-4-name
+5. Safety rating documentation-step-5-name
+6. Broker Bond-step-6-name
+7. Transportation Licensing-step-7-name
+8. Invoicing Procedures-step-8-name
+9. New Carrier Profile Information-step-9-name
+10. Carrier Quick-Pay Options-step-10-name
 
-### How to start this course
+### How to start this Carrier Registration Packet
 
 <!-- For start course, run in JavaScript:
 'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'TBD-organization',
-  template_name: 'TBD-course-name',
+  template_owner: 'TBD-J.D. DISPATCH 365',
+  template_name: 'TBD-Carrier Packet Registration-name',
   owner: '@me',
-  name: 'TBD-organization-TBD-course-name',
-  description: 'My clone repository',
+  name: 'TBD-J.D. DISPATCH 365--course-name',
+  description: 'My Carrier Intake repository',
   visibility: 'public',
 }).toString()
 -->
