@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Fichas de RPG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Fichas de RPG</h1>
+        <nav>
+            <ul>
+                <li><a href="#nova-ficha">Criar Nova Ficha</a></li>
+                <li><a href="#fichas-salvas">Fichas Salvas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="nova-ficha">
+        <h2>Criar Nova Ficha</h2>
+        <form id="form-ficha">
+            <label for="nome-personagem">Nome do Personagem:</label>
+            <input type="text" id="nome-personagem" name="nome-personagem" required>
+
+            <label for="classe">Classe:</label>
+            <input type="text" id="classe" name="classe" required>
+
+            <label for="nivel">Nível:</label>
+            <input type="number" id="nivel" name="nivel" min="1" required>
+
+            <label for="atributos">Atributos (Força, Destreza, etc.):</label>
+            <textarea id="atributos" name="atributos" rows="5" required></textarea>
+
+            <button type="button" onclick="salvarFicha()">Salvar Ficha</button>
+        </form>
+    </section>
+
+    <section id="fichas-salvas">
+        <h2>Fichas Salvas</h2>
+        <div id="lista-fichas">
+            <p>Nenhuma ficha salva ainda.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gerenciador de Fichas de RPG. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#lista-fichas {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}// script.js
+function salvarFicha() {
+    const nome = document.getElementById("nome-personagem").value;
+    const classe = document.getElementById("classe").value;
+    const nivel = document.getElementById("nivel").value;
+    const atributos = document.getElementById("atributos").value;
+
+    if (!nome || !classe || !nivel || !atributos) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    const ficha = {
+        nome,
+        classe,
+        nivel,
+        atributos
+    };
+
+    let fichasSalvas = JSON.parse(localStorage.getItem("fichas")) || [];
+    fichasSalvas.push(ficha);
+    localStorage.setItem("fichas", JSON.stringify(fichasSalvas));
+
+    alert("Ficha salva com sucesso!");
+    exibirFichas();
+}
+
+function exibirFichas() {
+    const fichasSalvas = JSON.parse(localStorage.getItem("fichas")) || [];
+    const listaFichas = document.getElementById("lista-fichas");
+
+    if (fichasSalvas.length === 0) {
+        listaFichas.innerHTML = "<p>Nenhuma ficha salva ainda.</p>";
+        return;
+    }
+
+    listaFichas.innerHTML = "";
+    fichasSalvas.forEach((ficha, index) => {
+        const fichaDiv = document.createElement("div");
+        fichaDiv.className = "ficha";
+        fichaDiv.innerHTML = `
+            <h3>${ficha.nome}</h3>
+            <p><strong>Classe:</strong> ${ficha.classe}</p>
+            <p><strong>Nível:</strong> ${ficha.nivel}</p>
+            <p><strong>Atributos:</strong></p>
+            <pre>${ficha.atributos}</pre>
+            <button onclick="deletarFicha(${index})">Deletar</button>
+        `;
+        listaFichas.appendChild(fichaDiv);
+    });
+}
+
+function deletarFicha(index) {
+    let fichasSalvas = JSON.parse(localStorage.getItem("fichas")) || [];
+    fichasSalvas.splice(index, 1);
+    localStorage.setItem("fichas", JSON.stringify(fichasSalvas));
+    exibirFichas();
+}
+
+document.addEventListener("DOMContentLoaded", exibirFichas);
