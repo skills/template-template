@@ -20,8 +20,8 @@
     }
 
     header img {
-      width: 100px;
-      border-radius: 50%;
+      width: 150px;
+      border-radius: 8px;
     }
 
     header h1 {
@@ -100,7 +100,7 @@
   <main>
     <section id="about" class="about">
       <h2>About Us</h2>
-      <p>CEN Property Management is dedicated to providing tailored property management solutions. With professionalism, transparency, and customer satisfaction at the core of our business, we work tirelessly to create thriving communities. We manage properties efficiently, maintain high standards, and foster positive relationships with both residents and property owners.</p>
+      <p>At CEN Property Management, we bring a wealth of experience and dedication to property management, offering tailored solutions to meet the unique needs of property owners and residents. With us, you’ll find a trusted partner committed to professionalism, transparency, and customer satisfaction. We take pride in managing properties efficiently, upholding the highest standards to enhance property value, and creating thriving communities.</p>
     </section>
 
     <section id="mission" class="mission">
