@@ -70,3 +70,40 @@
 	top:5px;
 	left:4px;
 }
+
+.nav {
+    position: fixed;
+    top: 20%;
+    right: -70%;
+    width: 200px;
+  height: auto;
+  margin-left: auto;
+  /* メニューを縦に */
+  display: flex;
+  flex-direction: column;
+  color: #efefef;
+  font-family: 'myfont';
+  background-color: rgba(16, 16, 15, 0.8);
+  transition: .3s;
+  z-index: 5000;
+}
+
+.nav.open {
+    right: 0;
+    bottom: auto;
+}
+
+.nav-list {
+    width: 300px;
+  height: 60px;
+  padding: 0 0 0 10px;
+  /* メニューテキスト位置をリスト内中心に*/
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+li {
+    border-bottom: 3px solid #fff;
+    width: 300px;
+}

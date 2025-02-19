@@ -7,56 +7,74 @@
     src: url("../font/DotGothic16/DotGothic16-Regular.ttf") format("truetype") 
 }
 
-@media (min-width: 1200px)  and (max-width: 1980px) {
+@media (min-width: 1200px) and (max-width: 1980px) { 
 
 body {
-    overflow-x: hidden;
-    background-image:url(../image/cycling.webp);
+  text-align: center;
+    background: url(../image/cycling.jpg);
     background-attachment: fixed;
     background-size:cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 .main-cg {
-    background: url(../image/Top.jpg) center left /cover;
-    width: auto;
-    height: 900px;
+    /* background: url(../image/25265358_m.jpg) center left /cover; */
+    width: 100%;
+    max-width: 2000px;
+    height: 550px;
+}
+
+#video {
+  align-content:space-around;
+  /*天地中央配置*/
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  /*縦横幅指定*/
+  width: 100%;
+  height:160vh; 
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .main-title {
     position: relative;
-    /*background: url(../image/サイトロゴ.svg)  no-repeat;*/
+    background: url(../image/サイトロゴ.png)  no-repeat;
     width: 45%;
-    height: 60%;
-    margin-left: 55%;
-    top: 40%;
-    right: 3%;
+    height: 100%;
+    margin-left: 65%;
+    top: 50%;
+    z-index: 2;
 }
 
 
-/*ハンバーガーメニュー*/
+/* ハンバーガーメニュー
 .openbtn{
     bottom: 85%;
     left: 90%;
-	position: fixed;/*ボタン内側の基点となるためrelativeを指定*/
-	background:#0a090a98;
-	cursor: pointer;
+	  position: fixed;
+	  background:#0a090a98;
+	  cursor: pointer;
     width: 50px;
     height:50px;
 	border-radius: 5px;
     z-index: 5000;
 }
 
-/*ボタン内側*/
 .openbtn span{
     display: inline-block;
-    transition: all .4s;/*アニメーションの設定*/
+    transition: all .4s;
     position: absolute;
     left: 14px;
     height: 2px;
     border-radius: 5px;
 	background: #fff;
-  	width: 45%;
+  width: 45%;
+  z-index: 5000;
+}
 }
 
 
@@ -73,7 +91,7 @@ body {
 }
 
 .openbtn span:nth-of-type(3)::after {
-	content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+	content:"Menu";
 	position: absolute;
 	top:5px;
 	left:-2px;
@@ -82,7 +100,6 @@ body {
 	text-transform: uppercase;
 }
 
-/*openクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
 
 .openbtn.open span:nth-of-type(1) {
     top: 14px;
@@ -103,7 +120,7 @@ body {
 }
 
 .openbtn.open span:nth-of-type(3)::after {
-	content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+	content:"Close";
     transform: translateY(0) rotate(-45deg);
 	top:5px;
 	left:4px;
@@ -116,7 +133,6 @@ body {
     width: 200px;
   height: auto;
   margin-left: auto;
-  /* メニューを縦に */
   display: flex;
   flex-direction: column;
   color: #efefef;
@@ -135,7 +151,7 @@ body {
     width: 300px;
   height: 60px;
   padding: 0 0 0 10px;
-  /* メニューテキスト位置をリスト内中心に */
+ 
   display: flex;
   justify-content: start;
   align-items: center;
@@ -144,11 +160,12 @@ body {
 li {
     border-bottom: 3px solid #fff;
     width: 300px;
-}
+} */
 
 section {
     background-size: cover;
     background-color: rgba(128, 255, 213, 0);
+    text-align: center;
 }
 
 .section-one {
@@ -158,6 +175,7 @@ section {
 }
 
 .title {
+  margin-top: 500px;
   width: 80%;
   margin-left: 11%;
   height: auto;
@@ -170,7 +188,7 @@ section {
     line-height: 1;
     letter-spacing: 1px;
     padding: 55px;
-    margin-top: 20px;
+    margin-top: 60px;
     border-radius: 10%;
     text-align:start;
     background: no-repeat #ffffffeb;
@@ -189,7 +207,9 @@ section {
 
 .section-two-img {
   text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
+    width: 100%;
+    max-width: 1000px;
     /*margin-left: 650px;*/
     justify-content: center;
 }
@@ -213,7 +233,7 @@ section {
 }
 
 .tab-space {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .tab{
@@ -236,7 +256,7 @@ section {
   }
   
   .tab-contents{
-    background-color: #fefeffde;
+    background-color: #c7c9dede;
     display: none;
     padding: 20px;
   }
@@ -244,8 +264,8 @@ section {
   .is-btn-active{
     font-family: 'myfont';
     font-weight: 200;
-    color: #524f4f;
-    background-color: #ffffffe3;
+    color: #fff;
+    background-color: #99999de3;
     font-weight: bold;
   }
   
@@ -277,40 +297,46 @@ section {
   }
 
 .third-content {
-    display: flex;
-    align-items: center;
+    align-content: center;
+    display: inline-flex;
+    text-align: center;
     justify-content: space-evenly;
+    /* max-width: 95%; */
+    margin-top: 90px;
 }
 
 .third-content-2 {
-    display: flex;
-    /* flex-direction: row-reverse; */
-    align-items: center;
-    justify-content: space-evenly;
+    align-content: center;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-top: 90px;
 }
 
 .Third-cont-img {
     margin-top: 70px;
-    width: 380px;
+    width: 60%;
+    max-width: 700px;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
 }
 
 .Third-cont-com{
   white-space: pre-wrap;
     text-align: left;
-    margin-top: 70px;
-    letter-spacing: 1px;
+    margin-top: auto;
     font-family: 'myfont';
     font-size: 20px;
     background-color: #ffffffeb;
-    padding: 30px;
+    padding: 25px;
     border-radius: 10% 10% 10% 12% / 39% 39% 39% 39% ;
 }
 
 .Third-cont-img-2 {
-    margin-top: 70px;
-    width: 300px;
-    height: auto;
+    margin-top: 80px;
+    width: 60%;
+    max-width: 700px;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
 }
 
@@ -340,9 +366,9 @@ section {
     text-align: center;
     line-height: 300px;
     flex-shrink:0;
-  height:100%;
-  position:relative;
-  transition-property:transform;
+    height: auto;
+    position:relative;
+    transition-property:transform;
   }
 
   .seafty-rb{
@@ -401,16 +427,18 @@ section {
   
 
   footer{
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 5px;
-    height: 150px;
+    height: 170px;
     background-color: rgba(255, 255, 255, 0.788);
   }
 
   .footer-logo {
+    background: url(../image/サイトロゴmin.png) no-repeat center;
     width: 300px;
     height: 130px;
 }
@@ -431,10 +459,9 @@ section {
 
 
 
-
 /*レスポンシブ対応用メディアクエリ*/
 
-@media (min-width: 390px) and  (max-width: 1199px) {
+@media (min-width: 375px) and  (max-width: 1199px) {
 
   body::before {
     background-image:url(../image/cycling.jpg);
@@ -448,6 +475,7 @@ left: 0;
 z-index: -1;
 width: 100%;
 height: 100vh;
+text-align: center;
 }
 
 section {
@@ -456,37 +484,53 @@ section {
 }
 
 .main-cg {
-  background: url(../image/25265358_m.jpg) center left /cover;
-  width: auto;
-  height: 300px;
+  background: url(../image/25265358_m.jpg) no-repeat left /cover;
+  width: 100%;
+  max-width: 2000px;
+  height: 210px;
 }
 
+#video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: 1;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: auto;
+  height: auto; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%;
+
+}
 
 .main-title {
   position: relative;
-  background: url(../image/サイトロゴmin.png)  no-repeat;
+  background: url(../image/サイトロゴmin.png) no-repeat;
+  object-fit: contain;
   width: auto;
-  height: 200px;
-  justify-content: end;
-  margin-left:35%;
-  top: 70%;
+  height: 80px;
+  margin-left: 35%;
+  top: 65%;
+  z-index: 2;
 }
 
-.nav {
+/* .nav {
   position: fixed;
   top: 20%;
   right: -70%;
   width: 200px;
 height: auto;
 margin-left: auto;
-/* メニューを縦に */
+
 display: flex;
 flex-direction: column;
 color: #efefef;
 background-color: rgba(16, 16, 15, 0.845);
 transition: .3s;
 z-index: 5000;
-}
+} */
 
 .title {
   width: 80%;
@@ -518,7 +562,7 @@ z-index: 5000;
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;*/
-  height: 720px;
+  height: 545px;
   margin-top: 40px;
   width: auto;
   left:0px;
@@ -560,7 +604,8 @@ z-index: 5000;
 
 .Third-cont-img {
   margin-top: 70px;
-  width: 380px;
+  width: 70%;
+  max-width: 700px;
   border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
 }
 
@@ -617,10 +662,10 @@ z-index: 5000;
 }
 
 /*ハンバーガーメニュー*/
-.openbtn{
+/* .openbtn{
   bottom: 90%;
   left: 80%;
-position: fixed;/*ボタン内側の基点となるためrelativeを指定*/
+position: fixed;
 background:#0a090a98;
 cursor: pointer;
   width: 50px;
@@ -629,10 +674,10 @@ border-radius: 5px;
   z-index: 5000;
 }
 
-/*ボタン内側*/
+
 .openbtn span{
   display: inline-block;
-  transition: all .4s;/*アニメーションの設定*/
+  transition: all .4s;
   position: absolute;
   left: 14px;
   height: 2px;
@@ -655,7 +700,7 @@ top:25px;
 }
 
 .openbtn span:nth-of-type(3)::after {
-content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+content:"Menu";
 position: absolute;
 top:5px;
 left:-2px;
@@ -664,7 +709,7 @@ font-size: 0.6rem;
 text-transform: uppercase;
 }
 
-/*openクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
 
 .openbtn.open span:nth-of-type(1) {
   top: 14px;
@@ -685,7 +730,7 @@ opacity: 0;
 }
 
 .openbtn.open span:nth-of-type(3)::after {
-content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+content:"Close";
   transform: translateY(0) rotate(-45deg);
 top:5px;
 left:4px;
@@ -698,7 +743,7 @@ left:4px;
   width: 200px;
 height: auto;
 margin-left: auto;
-/* メニューを縦に */
+
 display: flex;
 flex-direction: column;
 color: #efefef;
@@ -716,10 +761,18 @@ z-index: 5000;
   width: 300px;
 height: 60px;
 padding: 0 0 0 10px;
-/* メニューテキスト位置をリスト内中心に */
+
 display: flex;
 justify-content: start;
 align-items: center;
+} */
+
+.third-content {
+  text-align: center;
+}
+
+.third-content-2 {
+  text-align: center;
 }
 
 /*スライドショー*/
@@ -853,14 +906,17 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.788);
 }
 
 
 .footer-logo {
+  margin-top: 20px;
+  background: url(../image/サイトロゴmin.png) no-repeat;
   width: 300px;
-  height: 130px;
+  height: 100px;
 }
 
 .button {
@@ -874,5 +930,5 @@ footer{
   font-size: 20px;
   margin-bottom: 10px;
 }
+  }
 
-}
