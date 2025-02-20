@@ -131,6 +131,7 @@
     padding: 25px;
     border-radius: 10% 10% 10% 12%/39% 39% 39% 39%;
   }
+  
   /*ギャラリーのCSS*/
   .swiper {
     padding: 0 50px;
@@ -152,6 +153,7 @@
     position: relative;
     transition-property: transform;
   }
+  
   .seafty-rb {
     display: flex;
     position: relative;
@@ -166,21 +168,14 @@
     text-decoration-line: underline;
     z-index: -2;
   }
+  
   .SDGs {
     position: relative;
     background-color: rgba(255, 255, 255, 0.9215686275);
     padding: 10px;
     top: 20px;
   }
-  /* .fourth-comment {
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    margin-top: 20px;
-    letter-spacing: 1px;
-    font-family: "myfont";
-    font-size: 20px;
-  } */
+  
   .fourth-wrapper {
     text-decoration: underline;
     font-family: "myfont";
@@ -199,13 +194,7 @@
     height: 100px;
 }
 
-/* .footer-logo {
-    background: url(../image/サイトロゴmin.png) no-repeat center;
-    width: 300px;
-    height: 130px;
-    width: 150px;
-    height: 60px;
-} */
+
 
 .button {
     position: relative;
@@ -220,6 +209,7 @@
 }
 
 }
+
 @media (max-width: 1024px) and (min-width: 601px) {
   .openbtn {
     width: 45px;
@@ -228,6 +218,7 @@
     right: 1.5vw;
   }
 }
+
 @media (max-width: 768px) {
   .main-title {
     width: 150px;
@@ -257,6 +248,7 @@
     bottom: auto;
   }
 }
+
 @media (max-width: 480px) {
   .main-title {
     width: 120px;
