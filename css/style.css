@@ -7,7 +7,17 @@
     src: url("../font/DotGothic16/DotGothic16-Regular.ttf") format("truetype") 
 }
 
+video {
+  width: 100%;
+  height: auto; /* アスペクト比を保持 */
+  max-height: 50vh; /* 画面の50%まで */
+  object-fit: cover;
+  display: block;
+}
+
+
 @media (min-width: 1200px)  and (max-width: 1980px) {
+
 
 body {
     overflow-x: hidden;
@@ -20,7 +30,7 @@ body {
 .main-cg {
     /* background: url(../image/Top.jpg) center left /cover; */
     width: auto;
-    height: 900px;
+    max-height: 50vh;
 }
 
 .main-title {
@@ -28,8 +38,8 @@ body {
     background: url(../image/サイトロゴ.svg)  no-repeat;
     width: 45%;
     height: 60%;
-    margin-left: 55%;
-    top: 40%;
+    margin-left: 70%;
+    top: -55%;
     right: 3%;
 }
 
