@@ -48,6 +48,10 @@
     display: grid;
   }
 
+  img {
+    margin: 1rem;
+  }
+
   .one-comment, .sec-two-com {
     font-size: 18px;
     padding: 55px;
