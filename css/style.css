@@ -42,7 +42,7 @@
     width: 650px;
   }
 
-  section, footer, img{
+  section, footer{
     justify-content: center;
     display: grid;
   }

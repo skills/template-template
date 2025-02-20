@@ -50,9 +50,9 @@ $breakpoints: (
     width: 650px;
     }
 
-    section, footer, img{
-        justify-content: center;
-        display: grid;
+    section, footer{
+        justify-items: center;
+        display: flex;
       }
 
     .one-comment, .sec-two-com {
