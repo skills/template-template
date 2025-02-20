@@ -42,7 +42,7 @@
     width: 650px;
   }
 
-  *section, footer{
+  section, footer, img{
     justify-content: center;
 
   }
