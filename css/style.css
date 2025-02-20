@@ -34,13 +34,13 @@ body {
 } */
 
 .main-title {
-    position: relative;
-    background: url(../image/サイトロゴ.png)  no-repeat;
-    width: 45%;
-    height: 60%;
-    margin-left: 70%;
-    top: -55%;
-    right: 3%;
+  position: absolute; /* 位置を調整 */
+  background: url(../image/サイトロゴ.png) no-repeat center center;
+  background-size: contain; /* 画像を要素内に収める */
+  width: 200px; /* ロゴの適切な幅 */
+  height: 100px; /* 高さも適切に */
+  right: 3%; /* 右端に配置 */
+  top: 10%; /* 適切な位置 */
 }
 
 /* ハンバーガーメニュー（デフォルト: PC用） */
