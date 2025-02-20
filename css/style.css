@@ -25,7 +25,7 @@ body {
 
 .main-title {
     position: relative;
-    /*background: url(../image/サイトロゴ.svg)  no-repeat;*/
+    background: url(../image/サイトロゴ.svg)  no-repeat;
     width: 45%;
     height: 60%;
     margin-left: 55%;
