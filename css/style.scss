@@ -39,22 +39,23 @@ $breakpoints: (
         right: 3%;
         top: 35%;
     }
-
-    .one-comment, .sec-two-com {
-        font-size: 18px;
-    white-space: pre-wrap;
+    *pre{
     font-family: 'myfont';
     line-height: 1;
     letter-spacing: 1px;
-    padding: 55px;
     margin-top: 60px;
     border-radius: 10%;
     text-align:start;
     background: no-repeat #ffffffeb;
     width: 650px;
     }
+    .one-comment, .sec-two-com {
+        font-size: 18px;
+        padding: 55px;
+    }
 
     .section-two-img {
+        margin-top: 20px;
         margin-left: 10%;
         width: 80%;
         justify-content: center;
