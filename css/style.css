@@ -44,7 +44,7 @@
 
   section, footer, img{
     justify-content: center;
-    display: flex;
+    display: grid;
   }
 
   .one-comment, .sec-two-com {
