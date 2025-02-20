@@ -19,8 +19,8 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    justify-content: center;
   }
+
   .main-title {
     position: absolute;
     background: url(../image/サイトロゴ.svg) no-repeat center center;
@@ -30,6 +30,7 @@
     right: 3%;
     top: 35%;
   }
+
   pre {
     font-family: "myfont";
     line-height: 1;
@@ -40,19 +41,24 @@
     background: no-repeat rgba(255, 255, 255, 0.9215686275);
     width: 650px;
   }
+
+*section{
+  justify-content: center;
+}
+
   .one-comment, .sec-two-com {
     font-size: 18px;
     padding: 55px;
   }
+
   .section-two-img {
     margin-top: 20px;
     margin-left: 10%;
     width: 80%;
-    justify-content: center;
   }
+
   .sec-two {
     display: grid;
-    justify-content: center;
     justify-items: center;
   }
   .rb {

@@ -49,6 +49,12 @@ $breakpoints: (
     background: no-repeat #ffffffeb;
     width: 650px;
     }
+
+    *section, footer{
+        justify-content: center;
+
+      }
+
     .one-comment, .sec-two-com {
         font-size: 18px;
         padding: 55px;
