@@ -18,7 +18,7 @@ body {
 }
 
 .main-cg {
-    background: url(../image/Top.jpg) center left /cover;
+    /* background: url(../image/Top.jpg) center left /cover; */
     width: auto;
     height: 900px;
 }
