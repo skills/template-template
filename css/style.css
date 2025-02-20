@@ -32,7 +32,7 @@
   }
 
   pre {
-    overflow-wrap: break-word;
+    white-space: pre-wrap;
     font-family: "myfont";
     line-height: 1;
     letter-spacing: 1px;
