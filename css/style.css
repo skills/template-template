@@ -19,6 +19,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    justify-content: center;
   }
   .main-title {
     position: absolute;
@@ -29,7 +30,7 @@
     right: 3%;
     top: 35%;
   }
-  * pre {
+  pre {
     font-family: "myfont";
     line-height: 1;
     letter-spacing: 1px;
