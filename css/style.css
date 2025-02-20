@@ -10,7 +10,7 @@
 video {
   width: 100%;
   height: auto; /* アスペクト比を保持 */
-  max-height: 50vh; /* 画面の50%まで */
+  max-height: 60vh; /* 画面の60%まで */
   object-fit: cover;
   display: block;
 }
@@ -35,7 +35,7 @@ body {
 
 .main-title {
     position: relative;
-    background: url(../image/サイトロゴ.svg)  no-repeat;
+    background: url(../image/サイトロゴ.png)  no-repeat;
     width: 45%;
     height: 60%;
     margin-left: 70%;
