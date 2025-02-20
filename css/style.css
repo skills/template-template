@@ -484,7 +484,7 @@ section {
 
 /*レスポンシブ対応用メディアクエリ*/
 
-@media (min-width: 390px) and  (max-width: 1199px) {
+/* @media (min-width: 390px) and  (max-width: 1199px) {
 
   body::before {
     background-image:url(../image/cycling.jpg);
@@ -498,20 +498,20 @@ left: 0;
 z-index: -1;
 width: 100%;
 height: 100vh;
-}
+} */
 
 section {
   background-size: cover;
   background-color: rgba(255, 255, 255, 0);
 }
 
-.main-cg {
+/* .main-cg {
   background: url(../image/25265358_m.jpg) center left /cover;
   width: auto;
   height: 300px;
-}
+} */
 
-
+/* 
 .main-title {
   position: relative;
   background: url(../image/サイトロゴmin.png)  no-repeat;
@@ -520,23 +520,23 @@ section {
   justify-content: end;
   margin-left:35%;
   top: 70%;
-}
+} */
 
-.nav {
+/* .nav {
   position: fixed;
   top: 20%;
   right: -70%;
   width: 200px;
 height: auto;
 margin-left: auto;
-/* メニューを縦に */
+メニューを縦に
 display: flex;
 flex-direction: column;
 color: #efefef;
 background-color: rgba(16, 16, 15, 0.845);
 transition: .3s;
 z-index: 5000;
-}
+} */
 
 .title {
   width: 80%;
