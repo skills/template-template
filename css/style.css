@@ -42,9 +42,10 @@
     width: 650px;
   }
 
-*section{
-  justify-content: center;
-}
+  *section, footer{
+    justify-content: center;
+
+  }
 
   .one-comment, .sec-two-com {
     font-size: 18px;
