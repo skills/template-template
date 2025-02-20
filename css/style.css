@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "myfont";
-  src: url("../font/DotGothic16/DotGothic16-Regular.ttf") format("truetype");
+  src: url("./font/font/DotGothic16/DotGothic16-Regular.ttf") format("truetype");
 }
 /* // メディアクエリによるレスポンシブデザイン */
 @media (min-width: 1200px) and (max-width: 1980px) {
