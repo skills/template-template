@@ -172,7 +172,7 @@
     padding: 10px;
     top: 20px;
   }
-  .fourth-comment {
+  /* .fourth-comment {
     position: relative;
     text-align: center;
     justify-content: center;
@@ -180,7 +180,7 @@
     letter-spacing: 1px;
     font-family: "myfont";
     font-size: 20px;
-  }
+  } */
   .fourth-wrapper {
     text-decoration: underline;
     font-family: "myfont";
