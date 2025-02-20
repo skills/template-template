@@ -1,927 +1,254 @@
 @charset "utf-8";
 
-@font-face { 
-    /* ① ここにfont-familyで指定したい名前を書く*/
-    font-family: "myfont"; 
-    /* フォントが置かれているパスを書く */ 
-    src: url("../font/DotGothic16/DotGothic16-Regular.ttf") format("truetype") 
+@font-face {
+    font-family: "myfont";
+    src: url("../font/DotGothic16/DotGothic16-Regular.ttf") format("truetype");
 }
 
-video {
-  width: 100%;
-  height: auto; /* アスペクト比を保持 */
-  max-height: 60vh; /* 画面の60%まで */
-  object-fit: cover;
-  display: block;
+// メディアクエリによるレスポンシブデザイン
+$breakpoints: (
+    "large": 1200px,
+    "medium": 1024px,
+    "tablet": 768px,
+    "small": 480px
+);
+
+@media (min-width: map-get($breakpoints, large)) and (max-width: 1980px) {
+    video {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: cover;
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+        background-image: url(../image/cycling.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .main-title {
+        position: absolute;
+        background: url(../image/サイトロゴ.svg) no-repeat center center;
+        background-size: contain;
+        width: 200px;
+        height: 100px;
+        right: 3%;
+        top: 35%;
+    }
 }
 
-
-@media (min-width: 1200px)  and (max-width: 1980px) {
-
-
-body {
-    overflow-x: hidden;
-    background-image:url(../image/cycling.jpg);
-    background-attachment: fixed;
-    background-size:cover;
-    background-repeat: no-repeat;
+@media (max-width: map-get($breakpoints, medium)) and (min-width: 601px) {
+    .openbtn {
+        width: 45px;
+        height: 45px;
+        bottom: 12px;
+        right: 1.5vw;
+    }
 }
 
-/* .main-cg {
-    background: url(../image/Top.jpg) center left /cover;
-    width: auto;
-    max-height: 50vh;
-} */
+@media (max-width: map-get($breakpoints, tablet)) {
+    .main-title {
+        width: 150px;
+        height: 75px;
+        right: 2%;
+        top: 5%;
+    }
 
-.main-title {
-  position: absolute;
-  background: url(../image/サイトロゴ.svg) no-repeat center center;
-  background-size: contain;
-  width: 200px;
-  height: 100px;
-  right: 3%;
-  top: 35%;
+    .openbtn {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 1vw;
+    }
+
+    .nav {
+        width: 100%;
+        top: 20%;
+        right: -70%;
+        display: flex;
+        flex-direction: column;
+        color: #efefef;
+        background-color: rgba(16, 16, 15, 0.845);
+        transition: .3s;
+        z-index: 5000;
+    }
+
+    .nav.open {
+        right: 0;
+        bottom: auto;
+    }
+
+    .one-comment, .sec-two-com {
+        font-size: 13px;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 10%;
+        width: auto;
+    }
+
+    .section-two-img {
+        margin-left: 10%;
+        width: 80%;
+    }
 }
 
-/* 画面幅が768px以下の場合（タブレットやモバイルサイズ） */
-@media (max-width: 768px) {
-  .main-title {
-    width: 150px;  /* ロゴの幅を小さく */
-    height: 75px;  /* 高さも小さく */
-    right: 2%;  /* 右端からの距離を調整 */
-    top: 5%;   /* 上端からの距離を調整 */
-  }
+@media (max-width: map-get($breakpoints, small)) {
+    .main-title {
+        width: 120px;
+        height: 60px;
+        right: 1%;
+        top: 5%;
+    }
+
+    .openbtn {
+        width: 35px;
+        height: 35px;
+        bottom: 8px;
+        right: 1vw;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .one-comment {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .sec-two-com {
+        font-size: 12px;
+        padding: 10px;
+        width: 90%;
+    }
+
+    .Third-cont-img {
+        width: 250px;
+        height: auto;
+    }
+
+    .Third-cont-com {
+        font-size: 14px;
+    }
+
+    .swiper-wrapper {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+        height: 100px;
+    }
+
+    .footer-logo {
+        width: 150px;
+        height: 60px;
+    }
 }
 
-/* 画面幅が480px以下の場合（モバイル） */
-@media (max-width: 480px) {
-  .main-title {
-    width: 120px;  /* ロゴの幅をさらに小さく */
-    height: 60px;  /* 高さも小さく */
-    right: 1%;  /* 右端からの距離を調整 */
-    top: 5%;   /* 上端からの距離を調整 */
-  }
-}
-
-
-/* ハンバーガーメニュー（デフォルト: PC用） */
+// ハンバーガーメニュー
 .openbtn {
-  position: fixed;
-  bottom: 15px;
-  right: 2vw; /* ビューポート幅の2%の位置に配置 */
-  width: 50px;
-  height: 50px;
-  background: rgba(10, 9, 10, 0.6);
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 5000;
+    position: fixed;
+    bottom: 15px;
+    right: 2vw;
+    width: 50px;
+    height: 50px;
+    background: rgba(10, 9, 10, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5000;
+
+    span {
+        display: inline-block;
+        transition: all 0.4s;
+        position: absolute;
+        left: 14px;
+        height: 2px;
+        border-radius: 5px;
+        background: #fff;
+        width: 45%;
+        
+        &:nth-of-type(1) {
+            top: 13px;
+        }
+        
+        &:nth-of-type(2) {
+            top: 19px;
+        }
+
+        &:nth-of-type(3) {
+            top: 25px;
+
+            &::after {
+                content: "Menu";
+                position: absolute;
+                top: 5px;
+                left: -2px;
+                color: #fff;
+                font-size: 0.6rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &.open span:nth-of-type(1) {
+        top: 14px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    &.open span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    &.open span:nth-of-type(3) {
+        top: 26px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+
+        &::after {
+            content: "Close";
+            transform: translateY(0) rotate(-45deg);
+            top: 5px;
+            left: 4px;
+        }
+    }
 }
 
-/* タブレット (601px〜1024px) の場合 */
-@media (max-width: 1024px) and (min-width: 601px) {
-  .openbtn {
-    width: 45px;
-    height: 45px;
-    bottom: 12px;
-    right: 1.5vw; /* 画面幅に応じて調整 */
-  }
-}
-
-/* スマホ画面 (600px以下) の場合 */
-@media (max-width: 600px) {
-  .openbtn {
-    width: 40px;
-    height: 40px;
-    bottom: 10px;
-    right: 1vw; /* さらに右端へ寄せる */
-  }
-}
-
-/*ボタン内側*/
-.openbtn span{
-    display: inline-block;
-    transition: all .4s;/*アニメーションの設定*/
-    position: absolute;
-    left: 14px;
-    height: 2px;
-    border-radius: 5px;
-	background: #fff;
-  	width: 45%;
-}
-
-
-.openbtn span:nth-of-type(1) {
-	top:13px;	
-}
-
-.openbtn span:nth-of-type(2) {
-	top:19px;
-}
-
-.openbtn span:nth-of-type(3) {
-	top:25px;
-}
-
-.openbtn span:nth-of-type(3)::after {
-	content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
-	position: absolute;
-	top:5px;
-	left:-2px;
-	color: #fff;
-	font-size: 0.6rem;
-	text-transform: uppercase;
-}
-
-/*openクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
-
-.openbtn.open span:nth-of-type(1) {
-    top: 14px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-}
-
-.openbtn.open span:nth-of-type(2) {
-	opacity: 0;
-}
-
-.openbtn.open span:nth-of-type(3){
-    top: 26px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-}
-
-.openbtn.open span:nth-of-type(3)::after {
-	content:"Close";/*3つ目の要素のafterにClose表示を指定*/
-    transform: translateY(0) rotate(-45deg);
-	top:5px;
-	left:4px;
-}
-
+// メニュー
 .nav {
     position: fixed;
     top: 20%;
     right: -70%;
     width: 200px;
-  height: auto;
-  margin-left: auto;
-  /* メニューを縦に */
-  display: flex;
-  flex-direction: column;
-  color: #efefef;
-  font-family: 'myfont';
-  background-color: rgba(16, 16, 15, 0.845);
-  transition: .3s;
-  z-index: 5000;
-}
-
-.nav.open {
-    right: 0;
-    bottom: auto;
-}
-
-.nav-list {
-    width: 300px;
-  height: 60px;
-  padding: 0 0 0 10px;
-  /* メニューテキスト位置をリスト内中心に */
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-li {
-    border-bottom: 3px solid #fff;
-    width: 300px;
-}
-
-section {
-    background-size: cover;
-    background-color: rgba(128, 255, 213, 0);
-}
-
-.section-one {
-  display:grid;
-  justify-content: center;
-  justify-items: center;
-}
-
-.title {
-  width: 80%;
-  margin-left: 11%;
-  height: auto;
-}
-
-.one-comment {
-  font-size: 18px;
-    white-space: pre-wrap;
-    font-family: 'myfont';
-    line-height: 1;
-    letter-spacing: 1px;
-    padding: 55px;
-    margin-top: 20px;
-    border-radius: 10%;
-    text-align:start;
-    background: no-repeat #ffffffeb;
-    width: 650px;;
-}
-
-.sec-title {
-    margin-top: 200px;
-}
-
-.sec-two {
-  display:grid;
-  justify-content: center;
-  justify-items: center;
-}
-
-.section-two-img {
-  text-align: center;
-    margin-top: 40px;
-    /*margin-left: 650px;*/
-    justify-content: center;
-}
-
-.rb {
-    margin-left: 300px;
-}
-
-.sec-two-com{
-    font-size: 18px;
-    white-space: pre-wrap;
-    font-family: 'myfont';
-    line-height: 1;
-    letter-spacing: 1px;
-    padding: 55px;
-    margin-top: 20px;
-    border-radius: 10%;
-    text-align:start;
-    background: no-repeat #ffffffeb;
-    width: 650px;
-}
-
-.tab-space {
-    margin-top: 50px;
-}
-
-.tab{
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .tab-list{
-    display: flex;
-  }
-  
-  .tab-list-item{
-    width: 25%;
-    text-align: center;
-    padding: 8px 0;
-    cursor: pointer;
-    font-family: 'myfont';
-    background-color: rgba(244, 246, 248, 0.915);
-    border-right: 2px solid rgb(1, 1, 1);
-  }
-  
-  .tab-contents{
-    background-color: #fefeffde;
-    display: none;
-    padding: 20px;
-  }
-  
-  .is-btn-active{
-    font-family: 'myfont';
-    font-weight: 200;
-    color: #524f4f;
-    background-color: #ffffffe3;
-    font-weight: bold;
-  }
-  
-  .is-contents-active{
-    display: block;
-  }
-
-  .cont-title {
-    font-size: 25px;
-    font-family: 'myfont';
-    color: rgb(78, 75, 75);
-  }
-
-  .cont-list {
-    font-family: 'myfont';
-    border: none;
-    color: rgb(17, 18, 18);
-    width: 350px;
-    list-style-type: square;
-    border-bottom: 3px solid rgb(10, 10, 10);
-  }
-
-  .cont-comment {
-    white-space: pre-wrap;
-    color: #3b3a3aeb;
-    line-height: 2;
-    font-family: 'myfont';
-    letter-spacing: 1px;
-  }
-
-.third-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.third-content-2 {
-    display: flex;
-    /* flex-direction: row-reverse; */
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.Third-cont-img {
-    margin-top: 70px;
-    width: 380px;
-    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
-}
-
-.Third-cont-com{
-  white-space: pre-wrap;
-    text-align: left;
-    margin-top: 70px;
-    letter-spacing: 1px;
-    font-family: 'myfont';
-    font-size: 20px;
-    background-color: #ffffffeb;
-    padding: 30px;
-    border-radius: 10% 10% 10% 12% / 39% 39% 39% 39% ;
-}
-
-.Third-cont-img-2 {
-    margin-top: 70px;
-    width: 300px;
-    height: auto;
-    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
-}
-
-.point{
-    color:red;
-    text-decoration: underline;
-    white-space: pre-wrap;
-}
-
-/*ギャラリーのCSS*/
-
-.swiper{
-    padding:0 50px;
-    margin-top: 40px;
-  }
-
-.swiper-wrapper {
-    /* wrapperのサイズを調整 */
-    height: 500px;
-    align-content: center;
-    flex-wrap: nowrap;
-  }
-  
-  .swiper-slide {
-    /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
-    background-color: #ffffff;
-    text-align: center;
-    line-height: 300px;
-    flex-shrink:0;
-  height:100%;
-  position:relative;
-  transition-property:transform;
-  }
-
-  .seafty-rb{
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
-    margin-right: 0px;
-    bottom: 0px;
-    color: rgb(77, 75, 75);
-    background-color:  #ffffffeb;
-    font-size: larger;
-    font-weight: bolder;
-    font-family: 'myfont';
-    text-decoration-line: underline;
-    z-index: -2;
-  }
-
-.SDGs{
-  position: relative;
-  background-color:  #ffffffeb;
-  padding: 10px;
-  top: 20px;
-}
-
-  .fourth-comment {
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    margin-top: 20px;
-    letter-spacing: 1px;
-    font-family: 'myfont';
-    font-size: 20px;
-  }
-
-.fourth-wrapper{
-    text-decoration: underline;
-    font-family: 'myfont';
-    margin-top: 10px;
-    justify-content: space-around;
-    display: flex;
-}
-
-  .forth-img-wrapper{
-    margin-top: 20px;
-    justify-content: center;
-    display: flex;
-  }
-
-  .forth-img {
-    padding: 0 10px;
-    margin-top: 20px;
-    width: 180px;
-    height: auto;;
-  }
-
-  
-
-  footer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.788);
-  }
+    color: #efefef;
+    background-color: rgba(16, 16, 15, 0.845);
+    transition: .3s;
+    z-index: 5000;
 
-  .footer-logo {
-    width: 300px;
-    height: 130px;
+    &.open {
+        right: 0;
+    }
+
+    .nav-list {
+        width: 300px;
+        height: 60px;
+        padding: 0 0 0 10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    li {
+        border-bottom: 3px solid #fff;
+        width: 300px;
+    }
 }
-
-.button {
-    position: relative;
-    justify-content: flex-end;
-    font-family: 'myfont';
-}
-
-.copyright {
-    font-family: 'myfont';
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-}
-
-
-
-
-/*レスポンシブ対応用メディアクエリ*/
-
-/* @media (min-width: 390px) and  (max-width: 1199px) {
-
-  body::before {
-    background-image:url(../image/cycling.jpg);
-    position: fixed;
-    background-repeat: no-repeat;
-    content: "";
-    background-size:cover ;
-  background-position-x: 40%;
-  top: 0;
-left: 0;
-z-index: -1;
-width: 100%;
-height: 100vh;
-} */
-
-section {
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-/* .main-cg {
-  background: url(../image/25265358_m.jpg) center left /cover;
-  width: auto;
-  height: 300px;
-} */
-
-/* 
-.main-title {
-  position: relative;
-  background: url(../image/サイトロゴmin.png)  no-repeat;
-  width: auto;
-  height: 200px;
-  justify-content: end;
-  margin-left:35%;
-  top: 70%;
-} */
-
-/* .nav {
-  position: fixed;
-  top: 20%;
-  right: -70%;
-  width: 200px;
-height: auto;
-margin-left: auto;
-メニューを縦に
-display: flex;
-flex-direction: column;
-color: #efefef;
-background-color: rgba(16, 16, 15, 0.845);
-transition: .3s;
-z-index: 5000;
-} */
-
-.title {
-  width: 80%;
-  margin-left: 11%;
-  height: auto;
-}
-
-.one-comment {
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  right: 0;
-  margin-left: 0;
-  background: no-repeat #ffffffeb;
-  width: auto;
-  top: 5%;
-  font-family: 'myfont';
-  letter-spacing: 2px;
-  font-size: 13px;
-  line-height: 2;
-  white-space: pre-wrap;
-  border-radius: 10%;
-  padding: 10px 10px;
-}
-
-.section-one {
-  /*background-image: url(../image/24379614_m.jpg);
-  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;*/
-  height: 720px;
-  margin-top: 40px;
-  width: auto;
-  left:0px;
-  position: relative;
-  z-index: 0;
-}
-
-.rb {
-  margin-left: 20%;
-  font-size: 12px;
-}
-
-    .section-two-img {
-      margin-top: 40px;
-      margin-left: 10%;
-      width: 80%;
-  }
-
-    .sec-two-com{
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-family: 'myfont';
-      line-height: 2;
-      padding: 10px;
-      margin-top: 20px;
-      border-radius: 10%;
-      text-align: left;
-      white-space: pre-wrap;
-      margin-left: 13%;
-      background: no-repeat #ffffffeb;
-      width: 75%;
-  }
-
-#seafty {
-  display:grid;
-  justify-items: center;
-
-}
-
-.Third-cont-img {
-  margin-top: 70px;
-  width: 380px;
-  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
-}
-
-.Third-cont-com{
-  text-align: left;
-  margin-top: 70px;
-  letter-spacing: 1px;
-  font-family: 'myfont';
-  font-size: 20px;
-  background-color:  #ffffffeb;
-  padding: 30px;
-  border-radius: 10% 10% 10% 12% / 39% 39% 39% 39% ;
-}
-
-.Third-cont-img-2 {
-  margin-top: 70px;
-  width: 300px;
-  height: auto;
-  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
-}
-
-  .Third-cont-com{
-    justify-items: center;
-    white-space: pre-wrap;
-    text-align: left;
-    margin-top: 40px;
-    letter-spacing: 1px;
-    font-family: 'myfont';
-    font-size: 12px;
-    background-color: #ffffffeb;
-    padding: 0 30px;
-    border-radius: 10% 10% 10% 12% / 39% 39% 39% 39% ;
-}
-
-.cont-comment {
-  white-space: pre-wrap;
-  color: #fff;
-  line-height: 1;
-  font-family: 'myfont';
-  letter-spacing: 1px;
-  width: 300px;
-}
-
-
-.fourth-comment {
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  margin-top: 40px;
-  letter-spacing: 1px;
-  font-family: 'myfont';
-  font-size: 13px;
-  white-space: pre-wrap;
-}
-
-/*ハンバーガーメニュー*/
-.openbtn{
-  bottom: 90%;
-  left: 80%;
-position: fixed;/*ボタン内側の基点となるためrelativeを指定*/
-background:#0a090a98;
-cursor: pointer;
-  width: 50px;
-  height:50px;
-border-radius: 5px;
-  z-index: 5000;
-}
-
-/*ボタン内側*/
-.openbtn span{
-  display: inline-block;
-  transition: all .4s;/*アニメーションの設定*/
-  position: absolute;
-  left: 14px;
-  height: 2px;
-  border-radius: 5px;
-background: #fff;
-  width: 45%;
-}
-
-
-.openbtn span:nth-of-type(1) {
-top:13px;	
-}
-
-.openbtn span:nth-of-type(2) {
-top:19px;
-}
-
-.openbtn span:nth-of-type(3) {
-top:25px;
-}
-
-.openbtn span:nth-of-type(3)::after {
-content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
-position: absolute;
-top:5px;
-left:-2px;
-color: #fff;
-font-size: 0.6rem;
-text-transform: uppercase;
-}
-
-/*openクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
-
-.openbtn.open span:nth-of-type(1) {
-  top: 14px;
-  left: 18px;
-  transform: translateY(6px) rotate(-45deg);
-  width: 30%;
-}
-
-.openbtn.open span:nth-of-type(2) {
-opacity: 0;
-}
-
-.openbtn.open span:nth-of-type(3){
-  top: 26px;
-  left: 18px;
-  transform: translateY(-6px) rotate(45deg);
-  width: 30%;
-}
-
-.openbtn.open span:nth-of-type(3)::after {
-content:"Close";/*3つ目の要素のafterにClose表示を指定*/
-  transform: translateY(0) rotate(-45deg);
-top:5px;
-left:4px;
-}
-
-.nav {
-  position: fixed;
-  top: 20%;
-  right: -70%;
-  width: 200px;
-height: auto;
-margin-left: auto;
-/* メニューを縦に */
-display: flex;
-flex-direction: column;
-color: #efefef;
-background-color: rgba(16, 16, 15, 0.845);
-transition: .3s;
-z-index: 5000;
-}
-
-.nav.open {
-  right: 0;
-  bottom: auto;
-}
-
-.nav-list {
-  width: 300px;
-height: 60px;
-padding: 0 0 0 10px;
-/* メニューテキスト位置をリスト内中心に */
-display: flex;
-justify-content: start;
-align-items: center;
-}
-
-/*スライドショー*/
-.swiper{
-  padding:0 50px;
-  margin-top: 40px;
-}
-
-.swiper-wrapper {
-  /* wrapperのサイズを調整 */
-  height: 500px;
-  align-content: center;
-  flex-wrap: nowrap;
-}
-
-.swiper-slide {
-  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
-  background-color: #ffffff;
-  text-align: center;
-  line-height: 300px;
-  flex-shrink:0;
-height:100%;
-position:relative;
-transition-property:transform;
-}
-
-
-
-.SDGs {
-  position: relative;
-  background-color:  #ffffffeb;
-  padding: 10px;
-  top: 20px;
-}
-
-pre{
-  width: auto;
-}
-
-.tab-space {
-  margin-top: 50px;
-}
-
-.tab{
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.tab-list{
-  display: flex;
-}
-
-.tab-list-item{
-  width: 25%;
-  text-align: center;
-  padding: 8px 0;
-  cursor: pointer;
-  background-color: #fff;
-  border-right: 2px solid rgb(1, 1, 1);
-}
-
-.tab-contents{
-  background-color: #434348;
-  display: none;
-  padding: 20px;
-}
-
-.is-btn-active{
-  font-weight: 200;
-  color: rgb(253, 252, 252);
-  background-color: #5e5f60;
-  font-weight: bold;
-}
-
-.is-contents-active{
-  display: block;
-}
-
-.cont-title {
-  font-size: 25px;
-  color: white;
-}
-
-.cont-list {
-  border: none;
-  color: rgb(238, 243, 243);
-  width: 350px;
-  list-style-type: square;
-  border-bottom: 3px solid rgb(10, 10, 10);
-}
-
-.cont-comment {
-  color: #fff;
-  line-height: 2;
-  font-family: 'myfont';
-  letter-spacing: 1px;
-}
-
-.fourth-wrapper{
-  text-decoration: underline;
-  font-family: 'myfont';
-  margin-top: 10px;
-  justify-content: space-around;
-  display: flex;
-}
-
-.forth-img-wrapper{
-  margin-top: 20px;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(2, 150px);
-}
-.seafty-rb{
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  margin-right: 5;
-  top: 0;
-  color: rgb(77, 75, 75);
-  background-color:  #ffffffeb;
-  font-size:medium;
-  font-weight: bolder;
-  font-family: 'myfont';
-  text-decoration-line: underline;
-  z-index: -2;
-}
-
-footer{
-  display: flex;
-  flex: 2;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 150px;
-  background-color: rgba(255, 255, 255, 0.788);
-}
-
-
-.footer-logo {
-  width: 300px;
-  height: 130px;
-}
-
-.button {
-  position: relative;
-  justify-content: flex-end;
-  font-family: 'myfont';
-}
-
-.copyright {
-  font-family: 'myfont';
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
