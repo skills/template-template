@@ -34,14 +34,35 @@ body {
 } */
 
 .main-title {
-  position: absolute; /* 位置を調整 */
+  position: absolute;
   background: url(../image/サイトロゴ.png) no-repeat center center;
-  background-size: contain; /* 画像を要素内に収める */
-  width: 200px; /* ロゴの適切な幅 */
-  height: 100px; /* 高さも適切に */
-  right: 3%; /* 右端に配置 */
-  top: 10%; /* 適切な位置 */
+  background-size: contain;
+  width: 200px;
+  height: 100px;
+  right: 3%;
+  top: 10%;
 }
+
+/* 画面幅が768px以下の場合（タブレットやモバイルサイズ） */
+@media (max-width: 768px) {
+  .main-title {
+    width: 150px;  /* ロゴの幅を小さく */
+    height: 75px;  /* 高さも小さく */
+    right: 2%;  /* 右端からの距離を調整 */
+    top: 5%;   /* 上端からの距離を調整 */
+  }
+}
+
+/* 画面幅が480px以下の場合（モバイル） */
+@media (max-width: 480px) {
+  .main-title {
+    width: 120px;  /* ロゴの幅をさらに小さく */
+    height: 60px;  /* 高さも小さく */
+    right: 1%;  /* 右端からの距離を調整 */
+    top: 5%;   /* 上端からの距離を調整 */
+  }
+}
+
 
 /* ハンバーガーメニュー（デフォルト: PC用） */
 .openbtn {
