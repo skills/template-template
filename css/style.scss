@@ -39,7 +39,7 @@ $breakpoints: (
         right: 3%;
         top: 35%;
     }
-    *pre{
+    pre{
     font-family: 'myfont';
     line-height: 1;
     letter-spacing: 1px;
@@ -50,7 +50,7 @@ $breakpoints: (
     width: 650px;
     }
 
-    *section, footer{
+    section, footer, img{
         justify-content: center;
 
       }
