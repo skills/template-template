@@ -83,16 +83,17 @@ $breakpoints: (
     }
 
     .one-comment, .sec-two-com {
-        font-size: 13px;
-        padding: 10px;
-        margin-top: 20px;
-        border-radius: 10%;
-        width: auto;
-        line-height: 1;
-        letter-spacing: 1px;
-        text-align:start;
-        background: no-repeat #ffffffeb;
-        width: 650px;;
+        font-size: 18px;
+    white-space: pre-wrap;
+    font-family: 'myfont';
+    line-height: 1;
+    letter-spacing: 1px;
+    padding: 55px;
+    margin-top: 60px;
+    border-radius: 10%;
+    text-align:start;
+    background: no-repeat #ffffffeb;
+    width: 650px;
     }
 
     .section-two-img {
