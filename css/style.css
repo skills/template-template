@@ -193,6 +193,32 @@
     justify-content: center;
     display: flex;
   }
+
+  footer {
+    padding: 10px;
+    height: 100px;
+}
+
+.footer-logo {
+    background: url(../image/サイトロゴmin.png) no-repeat center;
+    width: 300px;
+    height: 130px;
+    width: 150px;
+    height: 60px;
+}
+
+.button {
+    position: relative;
+    justify-content: flex-end;
+    font-family: 'myfont';
+}
+
+.copyright {
+    font-family: 'myfont';
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 }
 @media (max-width: 1024px) and (min-width: 601px) {
   .openbtn {
@@ -266,29 +292,7 @@
   .swiper-wrapper {
     padding: 10px;
   }
-  footer {
-    padding: 10px;
-    height: 100px;
-  }
-  .footer-logo {
-    background: url(../image/サイトロゴmin.png) no-repeat center;
-    width: 300px;
-    height: 130px;
-  }
-  .button {
-    position: relative;
-    justify-content: flex-end;
-    font-family: "myfont";
-  }
-  .copyright {
-    font-family: "myfont";
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  .footer-logo {
-    width: 150px;
-    height: 60px;
-  }
+  
 }
 /* // ハンバーガーメニュー */
 .openbtn {

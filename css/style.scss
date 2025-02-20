@@ -59,6 +59,8 @@ $breakpoints: (
       img {
         margin: 2rem;
       }
+
+
     .one-comment, .sec-two-com {
         font-size: 18px;
         padding: 55px;
@@ -224,6 +226,32 @@ $breakpoints: (
     display: flex;
   }
 
+  footer {
+    padding: 10px;
+    height: 100px;
+}
+
+.footer-logo {
+    background: url(../image/サイトロゴmin.png) no-repeat center;
+    width: 300px;
+    height: 130px;
+    width: 150px;
+    height: 60px;
+}
+
+.button {
+    position: relative;
+    justify-content: flex-end;
+    font-family: 'myfont';
+}
+
+.copyright {
+    font-family: 'myfont';
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
 }
 
 @media (max-width: map-get($breakpoints, medium)) and (min-width: 601px) {
@@ -317,7 +345,6 @@ $breakpoints: (
     }
 
     .footer-logo {
-        background: url(../image/サイトロゴmin.png) no-repeat center;
         width: 300px;
         height: 130px;
     }
