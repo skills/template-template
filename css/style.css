@@ -35,7 +35,7 @@ body {
 
 .main-title {
   position: absolute;
-  background: url(../image/サイトロゴ.png) no-repeat center center;
+  background: url(../image/サイトロゴ.svg) no-repeat center center;
   background-size: contain;
   width: 200px;
   height: 100px;
