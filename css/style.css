@@ -27,11 +27,11 @@ body {
     background-repeat: no-repeat;
 }
 
-.main-cg {
-    /* background: url(../image/Top.jpg) center left /cover; */
+/* .main-cg {
+    background: url(../image/Top.jpg) center left /cover;
     width: auto;
     max-height: 50vh;
-}
+} */
 
 .main-title {
     position: relative;
