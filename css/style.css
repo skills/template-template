@@ -32,6 +32,7 @@
   }
 
   pre {
+    overflow-wrap: break-word;
     font-family: "myfont";
     line-height: 1;
     letter-spacing: 1px;
