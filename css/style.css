@@ -283,7 +283,7 @@ section {
 
 .third-content-2 {
     display: flex;
-    flex-direction: row-reverse;
+/*     flex-direction: row-reverse; */
     align-items: center;
     justify-content: space-evenly;
 }
