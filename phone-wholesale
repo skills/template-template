@@ -1,0 +1,9 @@
+ A[仓库设置] --> B[重命名为 phone-wholesale]
+    B --> C[保存更改]
+├── index.html       # 主页面
+├── products.js      # 产品数据逻辑
+├── styles.css       # 样式表
+└── assets/          # 存放图片等资源
+Branch: main (或 master)
+Folder: / (根目录)
+const sheetId = '替换为您的SheetID';
