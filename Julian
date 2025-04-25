@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julián</title>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            background-color: #f2f2f2;
+        }
+        
+        .barra {
+            width: 100%;
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            animation: carga 2s;
+        }
+        
+        @keyframes carga {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+        
+        .nombre {
+            font-size: 40px;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <link href="https:                                                                           
+</head>
+<body>
+    <div class="barra"></div>
+    <div class="nombre">Julián</div>
+</body>
+</html>
+
