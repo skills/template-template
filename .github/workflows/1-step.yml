@@ -1,16 +1,15 @@
 name: Step 1
 
-# Common event triggers: pull_request, push, issues, issue_comment (feel free to experiment)
-# Docs: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 
-# When using "push" consider the following so the step workflow is not triggered on repository creation.
-# Do NOT create a step workflow that triggers on `main` without a `paths` filter.
-# Do NOT design the `paths` filter for an **existing** file, only new files.
+
 on:
-  pull_request:
-    branches:
-      - main
-
+  workflow_dispatch:
+  # Common event triggers: pull_request, push, issues, issue_comment (feel free to experiment)
+  # Docs: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+  # Example:
+  # pull_request:
+  #   branches:
+  #     - main
 
 permissions:
   contents: read
@@ -64,8 +63,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_BODY: ${{ steps.build-message-step-finish.outputs.updated-text }}
-
-
 
   post_next_step_content:
     name: Post next step content
