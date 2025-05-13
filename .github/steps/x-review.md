@@ -2,7 +2,7 @@
 
 _Congratulations, you've completed this exercise and learned a lot about (replace-me: feature/product that was taught in this exercise)
 
-<img src="https://octodex.github.com/images/jetpacktocat.png" alt=celebrate width=200 align=right>
+<img src="https://octodex.github.com/images/jetpacktocat.png" alt="celebrate" width=200 align=right>
 
 Here's a recap of your accomplishments:
 
