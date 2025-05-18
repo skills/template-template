@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biochar - Tudo Sobre o Carvão Sustentável</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Biochar Brasil</div>
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">O que é Biochar?</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#producao">Produção</a></li>
+            <li><a href="#aplicacoes">Aplicações</a></li>
+            <li><a href="#impacto">Impacto Ambiental</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </nav>
+
+    <!-- Seção Inicial -->
+    <section id="home" class="hero">
+        <h1>Bem-vindo ao Mundo do Biochar</h1>
+        <p>Descubra como o biochar pode transformar a agricultura, mitigar mudanças climáticas e promover sustentabilidade.</p>
+        <a href="#sobre" class="cta-button">Saiba Mais</a>
+    </section>
+
+    <!-- Seção O que é Biochar? -->
+    <section id="sobre" class="section">
+        <h2>O que é Biochar?</h2>
+        <p>Biochar é um tipo de carvão produzido a partir da queima de biomassa em um ambiente com pouco ou nenhum oxigênio, por meio de um processo chamado pirólise. Diferente do carvão comum, o biochar é projetado para ser um material estável, rico em carbono, que pode ser usado para melhorar solos, sequestrar carbono e tratar resíduos.</p>
+        <p>Originado de práticas ancestrais, como as terras pretas de índio na Amazônia, o biochar tem sido estudado por sua capacidade de aumentar a fertilidade do solo e armazenar carbono por séculos.</p>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section id="beneficios" class="section">
+        <h2>Benefícios do Biochar</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Agricultura</h3>
+                <p>Melhora a retenção de água e nutrientes no solo, aumentando a produtividade agrícola.</p>
+            </div>
+            <div class="card">
+                <h3>Meio Ambiente</h3>
+                <p>Sequestra carbono, reduzindo emissões de gases de efeito estufa.</p>
+            </div>
+            <div class="card">
+                <h3>Gestão de Resíduos</h3>
+                <p>Converte resíduos orgânicos em um produto útil, reduzindo a poluição.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produção -->
+    <section id="producao" class="section">
+        <h2>Como o Biochar é Produzido?</h2>
+        <p>O biochar é produzido por meio da pirólise, um processo térmico que decompõe materiais orgânicos (como madeira, resíduos agrícolas ou esterco) em temperaturas entre 300°C e 700°C na ausência de oxigênio. Existem diferentes métodos, como:</p>
+        <ul>
+            <li><strong>Pirólise Lenta</strong>: Produz biochar de alta qualidade com maior teor de carbono.</li>
+            <li><strong>Pirólise Rápida</strong>: Gera biochar e bio-óleo, com menor tempo de processamento.</li>
+            <li><strong>Gaseificação</strong>: Produz biochar como subproduto, junto com gases combustíveis.</li>
+        </ul>
+        <p>O tipo de biomassa e as condições de pirólise influenciam as propriedades do biochar, como porosidade e capacidade de retenção de nutrientes.</p>
+    </section>
+
+    <!-- Seção Aplicações -->
+    <section id="aplicacoes" class="section">
+        <h2>Aplicações do Biochar</h2>
+        <p>O biochar tem diversas aplicações práticas, incluindo:</p>
+        <ul>
+            <li><strong>Agricultura</strong>: Melhora a fertilidade do solo, especialmente em solos pobres.</li>
+            <li><strong>Remediação Ambiental</strong>: Adsorve poluentes em solos e água contaminados.</li>
+            <li><strong>Construção</strong>: Usado em materiais compósitos para maior sustentabilidade.</li>
+            <li><strong>Energia</strong>: Subproduto de processos que geram bio-óleo e syngas.</li>
+        </ul>
+    </section>
+
+    <!-- Seção Impacto Ambiental -->
+    <section id="impacto" class="section">
+        <h2>Impacto Ambiental</h2>
+        <p>O biochar é uma ferramenta poderosa para combater as mudanças climáticas. Ele pode:</p>
+        <ul>
+            <li>Sequestrar carbono no solo por centenas ou milhares de anos.</li>
+            <li>Reduzir emissões de metano e óxido nitroso em solos agrícolas.</li>
+            <li>Diminuir a necessidade de fertilizantes químicos, reduzindo a pegada de carbono da agricultura.</li>
+        </ul>
+        <p>Estudos estimam que o uso global de biochar pode sequestrar até 1 bilhão de toneladas de CO₂ por ano.</p>
+    </section>
+
+    <!-- Seção Recursos -->
+    <section id="recursos" class="section">
+        <h2>Recursos e Referências</h2>
+        <p>Para saber mais, consulte os seguintes recursos:</p>
+        <ul>
+            <li><a href="https://www.biochar-international.org/" target="_blank">International Biochar Initiative</a></li>
+            <li><a href="https://www.nature.com/articles/s41467-018-02918-3" target="_blank">Estudo sobre Sequestro de Carbono</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S0960852417313709" target="_blank">Biochar na Agricultura</a></li>
+        </ul>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Biochar Brasil. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
